@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+.title > p{
+    display: flex;
+    justify-content: center;
+    font-size: 128px;
+}
+
+.grid-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+}
+
+#grid-content{
+    display: grid;
+    grid-template: repeat(3,300px) / repeat(3,300px);
+    gap: 15px;
+    background-color: grey;
+    outline: rgb(219, 14, 14) solid 1px;
+}
+.square{
+    width: 1fr;
+    height: 300px;
+    background-color: white;
+}
+
+.scorecard{
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+}
+.footer{
+    display: flex;
+    justify-content: center;  
+}
