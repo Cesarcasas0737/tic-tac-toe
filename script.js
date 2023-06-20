@@ -1,3 +1,7 @@
+const playerFactory = (name,symbol,points) => {
+    return {name,symbol,points}  
+}
+
 let tttBoard = [];
 
 tttBoard = getTTTBoard();
