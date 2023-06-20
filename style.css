@@ -12,6 +12,13 @@
     font-size: 128px;
 }
 
+#welcomeScreen{
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-color: red;
+}
+
 .grid-wrapper{
     display: flex;
     flex-direction: column;
