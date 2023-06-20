@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"defer></script>
 </head>
@@ -17,16 +17,39 @@
 
     <div class="grid-wrapper">
         <div id="welcomeScreen">
-            <div class="promptWrapper">
-                <div class="promptBox">
-                    <div class="promptName">
-    
+            <form action="player-choice-form">
+                <div class="promptWrapper">
+                    <div class="promptBox">
+                        <div class="promptName">
+                            <label for="name">Name</label>
+                            <input type="text" id="pOneName">
+                        </div>
+                        <div class="promptSymbol">
+                            <label for="symbol">O</label>
+                            <input type="radio" name="pOneO" value="false">
+                            <br>
+                            <label for="symbol">X</label>
+                            <input type="radio" name="pOneX" value="false">
+                        </div>
                     </div>
-                    <div class="promptSymbol">
-                        
+                    <div class="promptBox">
+                        <div class="promptName">
+                            <label for="name">Name</label>
+                            <input type="text" id="pTwoName">
+                        </div>
+                        <div class="promptSymbol">
+                            <label for="symbol">O</label>
+                            <input type="radio" name="pTwoO" value="false">
+                            <br>
+                            <label for="symbol">X</label>
+                            <input type="radio" name="pTwoX" value="false">
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="confirmButton">
+                    <input type="submit" value="confirm">
+                </div>
+            </form>
         </div>
 
         <div id="grid-content">
