@@ -1,42 +1,43 @@
-const pOneO = document.querySelector('input[name="pOneO"]');
-const pTwoX = document.querySelector('input[name="pTwoX"]');
+function ensureFormChoice(){
+    const pOneO = document.querySelector('input[name="pOneO"]');
+    const pTwoX = document.querySelector('input[name="pTwoX"]');
 
-const pOneX = document.querySelector('input[name="pOneX"]');
-const pTwoO = document.querySelector('input[name="pTwoO"]');
+    const pOneX = document.querySelector('input[name="pOneX"]');
+    const pTwoO = document.querySelector('input[name="pTwoO"]');
 
-pOneO.addEventListener('change', function() {
-    if (this.checked) {
-        pOneX.checked = false;
-        pTwoX.checked = true;
-        pTwoO.checked = false;
-      
-    }
-  });
-  pOneX.addEventListener('change', function() {
-    if (this.checked) {
-        pOneO.checked = false;
-        pTwoX.checked = false;
-        pTwoO.checked = true;
-      
-    }
-  });
+    pOneO.addEventListener('change', function() {
+        if (this.checked) {
+            pOneX.checked = false;
+            pTwoX.checked = true;
+            pTwoO.checked = false;
+        
+        }
+    });
+    pOneX.addEventListener('change', function() {
+        if (this.checked) {
+            pOneO.checked = false;
+            pTwoX.checked = false;
+            pTwoO.checked = true;
+        
+        }
+    });
 
-  pTwoX.addEventListener('change', function() {
-    if (this.checked) {
-        pTwoO.checked = false;
-        pOneO.checked = true;
-        pOneX.checked = false;
-    }
-  });
+    pTwoX.addEventListener('change', function() {
+        if (this.checked) {
+            pTwoO.checked = false;
+            pOneO.checked = true;
+            pOneX.checked = false;
+        }
+    });
 
-  pTwoO.addEventListener('change', function() {
-    if (this.checked) {
-        pTwoX.checked = false;
-        pOneO.checked = false;
-        pOneX.checked = true;
-    }
-  });
-
+    pTwoO.addEventListener('change', function() {
+        if (this.checked) {
+            pTwoX.checked = false;
+            pOneO.checked = false;
+            pOneX.checked = true;
+        }
+    });
+}
 
 const playerFactory = (name,symbol,points) => {
     return {name,symbol,points}  
