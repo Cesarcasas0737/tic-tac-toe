@@ -38,6 +38,9 @@ function ensureFormChoice(){
         }
     });
 }
+document.querySelector("#player-choice-form").addEventListener("submit", function(event){
+    event.preventDefault();
+})
 
 const playerFactory = (name,symbol,points) => {
     return {name,symbol,points}  
@@ -62,3 +65,10 @@ function getTTTBoard(){
     return array;
 }
 
+var form = document.getElementById('player-choice-form')
+
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+
+    var getPlOneName = document.getElementById('pOneName').value
+})
