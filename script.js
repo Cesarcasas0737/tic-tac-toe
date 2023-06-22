@@ -1,7 +1,7 @@
+
 function ensureFormChoice(){
     const pOneO = document.querySelector('input[name="pOneO"]');
     const pTwoX = document.querySelector('input[name="pTwoX"]');
-
     const pOneX = document.querySelector('input[name="pOneX"]');
     const pTwoO = document.querySelector('input[name="pTwoO"]');
 
@@ -44,13 +44,8 @@ function ensureFormChoice(){
             pOneO.checked = true;
             pOneX.checked = false;
         }
-    });
-
-    
+    });  
 }
-document.querySelector("#player-choice-form").addEventListener("submit", function(event){
-    event.preventDefault();
-})
 
 const playerFactory = (name,symbol,points) => {
     return {name,symbol,points}  
@@ -75,17 +70,27 @@ function getTTTBoard(){
     return array;
 }
 
+document.querySelector("#player-choice-form").addEventListener("submit", function(event){
+    event.preventDefault();
 
-var form = document.getElementById('player-choice-form')
-
-form.addEventListener('submit',function(event){
-    event.preventDefault()
-
-    var getPlOneName = document.getElementById('pOneName').value
-    var getPlTwoName = document.getElementById('pTwoName').value
-
-    var getPlTwoSymbol = document.getElementById('pTwoSymbol').value
-    console.log(getPlTwoSymbol)
-
+    
 })
+
+function getFormInfo(){
+    var form = document.getElementById('player-choice-form')
+    form.addEventListener('submit',function(event){
+        event.preventDefault()
+    
+        var getPlOneName = document.getElementById('pOneName').value;
+        var getPlOneSymbol = document.getElementById('pOneSymbol').value;
+
+        var getPlTwoName = document.getElementById('pTwoName').value;
+        var getPlTwoSymbol = document.getElementById('pTwoSymbol').value;
+        
+        var array= [getPlOneName,getPlOneSymbol,getPlTwoName,getPlTwoSymbol];
+        console.log(array)
+        return array;
+    })
+    
+}
 

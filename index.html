@@ -22,7 +22,7 @@
                     <div class="promptBox">
                         <div class="promptName">
                             <label for="name">Player1</label>
-                            <input type="text" id="pOneName" placeholder="name">
+                            <input type="text" id="pOneName" placeholder="name" required>
                         </div>
                         <div class="promptSymbol">
                             <label for="symbol">O</label>
@@ -35,7 +35,7 @@
                     <div class="promptBox">
                         <div class="promptName">
                             <label for="name">Player2</label>
-                            <input type="text" id="pTwoName" placeholder="name">
+                            <input type="text" id="pTwoName" placeholder="name" required>
                         </div>
                         <div class="promptSymbol">
                             <label for="symbol">O</label>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="confirmButton">
-                    <input type="submit" value="confirm">
+                    <input type="submit" value="confirm" onclick="getFormInfo()">
                 </div>
             </form>
         </div>
