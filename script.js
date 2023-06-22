@@ -7,6 +7,8 @@ function ensureFormChoice(){
 
     pOneO.addEventListener('change', function() {
         if (this.checked) {
+            document.getElementById("pOneSymbol").value = 'O';
+            document.getElementById("pTwoSymbol").value = 'X';
             pOneX.checked = false;
             pTwoX.checked = true;
             pTwoO.checked = false;
@@ -15,6 +17,8 @@ function ensureFormChoice(){
     });
     pOneX.addEventListener('change', function() {
         if (this.checked) {
+            document.getElementById("pOneSymbol").value = 'X';
+            document.getElementById("pTwoSymbol").value = 'O';
             pOneO.checked = false;
             pTwoX.checked = false;
             pTwoO.checked = true;
@@ -22,21 +26,27 @@ function ensureFormChoice(){
         }
     });
 
+    pTwoO.addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById("pOneSymbol").value = 'X';
+            document.getElementById("pTwoSymbol").value = 'O';
+            pTwoX.checked = false;
+            pOneO.checked = false;
+            pOneX.checked = true;
+        }
+    });
+
     pTwoX.addEventListener('change', function() {
         if (this.checked) {
+            document.getElementById("pTwoSymbol").value = 'X';
+            document.getElementById("pOneSymbol").value = 'O';
             pTwoO.checked = false;
             pOneO.checked = true;
             pOneX.checked = false;
         }
     });
 
-    pTwoO.addEventListener('change', function() {
-        if (this.checked) {
-            pTwoX.checked = false;
-            pOneO.checked = false;
-            pOneX.checked = true;
-        }
-    });
+    
 }
 document.querySelector("#player-choice-form").addEventListener("submit", function(event){
     event.preventDefault();
@@ -65,10 +75,17 @@ function getTTTBoard(){
     return array;
 }
 
+
 var form = document.getElementById('player-choice-form')
 
 form.addEventListener('submit',function(event){
     event.preventDefault()
 
     var getPlOneName = document.getElementById('pOneName').value
+    var getPlTwoName = document.getElementById('pTwoName').value
+
+    var getPlTwoSymbol = document.getElementById('pTwoSymbol').value
+    console.log(getPlTwoSymbol)
+
 })
+
