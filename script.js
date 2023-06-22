@@ -70,12 +70,6 @@ function getTTTBoard(){
     return array;
 }
 
-document.querySelector("#player-choice-form").addEventListener("submit", function(event){
-    event.preventDefault();
-
-    
-})
-
 function getFormInfo(){
     var form = document.getElementById('player-choice-form')
     form.addEventListener('submit',function(event){
@@ -86,7 +80,7 @@ function getFormInfo(){
 
         var getPlTwoName = document.getElementById('pTwoName').value;
         var getPlTwoSymbol = document.getElementById('pTwoSymbol').value;
-        
+
         var array= [getPlOneName,getPlOneSymbol,getPlTwoName,getPlTwoSymbol];
         console.log(array)
         return array;
