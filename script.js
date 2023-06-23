@@ -51,6 +51,7 @@ function ensureFormChoice(){
     });  
 }
 
+
 function getFormInfo(){
     var form = document.getElementById('player-choice-form')
     form.addEventListener('submit',function(event){
@@ -64,16 +65,28 @@ function getFormInfo(){
 
         var array= [getPlOneName,getPlOneSymbol,getPlTwoName,getPlTwoSymbol];
         console.log(array)
+        
+        playerOne = playerFactory(array[0],array[1],0);
+        playerTwo = playerFactory(array[2],array[3],0);
+        updateScoreInfo()
         hideForm();
-        return array;
     })
     
+}
+function updateScoreInfo(){
+    var playerOneScore = document.querySelector("#playerOneScore")
+    var playerTwoScore = document.querySelector("#playerTwoScore")
+    playerOneScore.innerHTML = playerOne.name + ":" +playerOne.points;
+    playerTwoScore.innerHTML = playerTwo.name + ":" +playerTwo.points;
 }
 
 const playerFactory = (name,symbol,points) => {
     return {name,symbol,points}  
 }
 
+let playerOne;
+let playerTwo;
+let ties;
 let tttBoard = [];
 
 tttBoard = getTTTBoard();
@@ -92,6 +105,7 @@ function getTTTBoard(){
     }
     return array;
 }
+
 
 
 
