@@ -51,7 +51,6 @@ function ensureFormChoice(){
     });  
 }
 
-
 function getFormInfo(){
     var form = document.getElementById('player-choice-form')
     form.addEventListener('submit',function(event){
@@ -73,11 +72,19 @@ function getFormInfo(){
     })
     
 }
+
 function updateScoreInfo(){
     var playerOneScore = document.querySelector("#playerOneScore")
+    var playerTies = document.querySelector("#playerTies")
     var playerTwoScore = document.querySelector("#playerTwoScore")
+
     playerOneScore.innerHTML = playerOne.name + ":" +playerOne.points;
+    playerTies.innerHTML = "Ties:" + tiesScore;
     playerTwoScore.innerHTML = playerTwo.name + ":" +playerTwo.points;
+}
+
+function incrementScoreboard(){
+
 }
 
 const playerFactory = (name,symbol,points) => {
@@ -86,7 +93,7 @@ const playerFactory = (name,symbol,points) => {
 
 let playerOne;
 let playerTwo;
-let ties;
+let tiesScore = 0;
 let tttBoard = [];
 
 tttBoard = getTTTBoard();
