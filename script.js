@@ -83,9 +83,22 @@ function updateScoreInfo(){
     playerTwoScore.innerHTML = playerTwo.name + ":" +playerTwo.points;
 }
 
-function incrementScoreboard(){
 
+/*
+function incrementScoreboard(){
+    switch(result){
+        case "playerOneWin":
+            playerOne.points++;
+        case "playerTwoWin":
+            playerTwo.points++;
+        case "tie":
+            tiesScore++;
+            break;
+        default:
+            console.log("Invalid result");
+    }
 }
+*/
 
 const playerFactory = (name,symbol,points) => {
     return {name,symbol,points}  
