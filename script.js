@@ -1,6 +1,6 @@
 function hideForm(){
     var div = document.getElementById("welcomeScreen")
-    div.classList.add("hidden");
+    div.classList.add("hidden")
 }
 
 function ensureFormChoice(){
