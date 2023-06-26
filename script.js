@@ -63,7 +63,7 @@ function getFormInfo(){
         var getPlTwoSymbol = document.getElementById('pTwoSymbol').value;
 
         var array= [getPlOneName,getPlOneSymbol,getPlTwoName,getPlTwoSymbol];
-        console.log(array)
+        /*console.log(array)*/
         
         playerOne = playerFactory(array[0],array[1],0);
         playerTwo = playerFactory(array[2],array[3],0);
@@ -85,7 +85,7 @@ function updateScoreInfo(){
 
 
 /*
-function incrementScoreboard(){
+function incrementScoreboard(result){
     switch(result){
         case "playerOneWin":
             playerOne.points++;
@@ -112,19 +112,30 @@ let tttBoard = [];
 tttBoard = getTTTBoard();
 console.log(tttBoard);
 
-function getTTTBoard(){
-    let array= [];
+function assignSymbol(i,j){
+
+}
+
+function getTTTBoard() {
     let row = 3;
     let col = 3;
-    
-    for(var i = 0; i < row;i++) {
-        array[i]=[];
-        for (var j = 0; j < col; j++){
-            array[i][j] =[];
-        }
+    let boardEl = document.querySelector("#grid-content");
+    boardEl.innerHTML = "";
+  
+    let tttBoard = [];
+  
+    for (var i = 0; i < row; i++) {
+      tttBoard[i] = [];
+      for (var j = 0; j < col; j++) {
+        let squareEL = document.createElement("div");
+        squareEL.className = "square";
+        boardEl.appendChild(squareEL);
+        tttBoard[i][j] = squareEL;
+      }
     }
-    return array;
-}
+    console.log(tttBoard)
+  }
+getTTTBoard();
 
 
 
